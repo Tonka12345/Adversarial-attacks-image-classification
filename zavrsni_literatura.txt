@@ -1,0 +1,15 @@
+https://medium.com/@amdnewaz/in-this-article-well-walk-through-building-a-simple-neural-network-using-pytorch-to-classify-211b33ba5c62
+
+https://neptune.ai/blog/train-pytorch-models-using-genetic-algorithm-with-pygad
+
+https://pytorch.org/docs/stable/generated/torch.nn.NLLLoss.html
+
+https://pytorch.org/tutorials/beginner/fgsm_tutorial.html
+
+https://medium.com/machine-intelligence-and-deep-learning-lab/is-it-a-bird-or-a-plane-one-pixel-attack-for-fooling-deep-neural-networks-ac9459efc781
+
+https://www.maths.uq.edu.au/MASCOS/Multi-Agent04/Fleetwood.pdf
+
+https://arxiv.org/pdf/1710.08864
+
+https://medium.com/machine-intelligence-and-deep-learning-lab/is-it-a-bird-or-a-plane-one-pixel-attack-for-fooling-deep-neural-networks-ac9459efc781
