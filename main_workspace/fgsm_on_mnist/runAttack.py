@@ -1,6 +1,3 @@
-import os, sys
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 import torch
 from torch.utils.data import DataLoader
 from sgd import ImageClassifier, load_model, testloader
