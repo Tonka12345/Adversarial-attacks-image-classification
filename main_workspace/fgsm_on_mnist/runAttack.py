@@ -51,7 +51,7 @@ def runFGSM(model, test_loader, epsilon, target=None):
             new_probs, new_predicted = torch.max(torch.exp(new_outputs).data, 1)
             
             #uspjeh <=> nonteargeted i nije dobra klasifikacija ili targeted i klasifikacija je target 
-            if (target == None and new_predicted.item() != labels.item()) or (new_predicted.item() == target[labels.item()]):
+            if (target == None and new_predicted.item() != labels.item()) or (target!=None and new_predicted.item() == target[labels.item()]):
                 #napad je bio uspjesan
                 successes += 1
                 if len(adv_examples) < 3:
@@ -72,27 +72,27 @@ def main():
 
     #examples
     for epsilon in epsilons:
-        successes, total, adv_examples = runFGSM(model, testloader, epsilon, target=target)
+        successes, total, adv_examples = runFGSM(model, testloader, epsilon, target=None)
         rate = successes / total
         rates.append(rate)
         print(f"epsilon= {epsilon}, successful_attacks: {successes} / {total}, success_rate: {rate}")
         if adv_examples:
             print(f"Displaying adversarial examples for epsilon={epsilon}")
-            visualize_adversarial_examples(adv_examples, save_path="./attack_data/targeted")
+            visualize_adversarial_examples(adv_examples, save_path="./attack_data/untargeted")
     
-    #rate
-    epsilons2 = []
-    rates2 = []
-    for i in range(80):
-        epsilons2.append(i*0.005)
-    i = 0
-    for epsilon in epsilons2:
-        successes, total, adv_examples = runFGSM(model, testloader, epsilon, target = target)
-        rate = successes / total
-        rates2.append(rate)
-        print(f"attack {i+1}/50")
-        i+=1
-    visiulize_success_rate(epsilons2, rates2, save_path="./attack_data/targeted")
+    # #rate
+    # epsilons2 = []
+    # rates2 = []
+    # for i in range(80):
+    #     epsilons2.append(i*0.005)
+    # i = 0
+    # for epsilon in epsilons2:
+    #     successes, total, adv_examples = runFGSM(model, testloader, epsilon, target = target)
+    #     rate = successes / total
+    #     rates2.append(rate)
+    #     print(f"attack {i+1}/50")
+    #     i+=1
+    # visiulize_success_rate(epsilons2, rates2, save_path="./attack_data/targeted")
 
 
 if __name__ == "__main__":
