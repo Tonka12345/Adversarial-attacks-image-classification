@@ -117,6 +117,6 @@ def train(imageClassifier, trainloader, testloader, criterion, optimizer, epochs
         print(f"Epoch {epoch+1}/{epochs} - Loss: {losses_train[epoch]:.4f}, Accuracy: {accuracy_test:.2f}%")
 
     save_model(imageClassifier, "last_trained")
-    display_learning(epochs, accuracies_test, accuracies_train, losses_test, losses_train)
+    #display_learning(epochs, accuracies_test, accuracies_train, losses_test, losses_train)
 
 #train(imageClassifier, trainloader, testloader, criterion, optimizer, epochs)

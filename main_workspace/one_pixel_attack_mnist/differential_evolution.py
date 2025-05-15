@@ -71,7 +71,7 @@ def fitness(v,model, image, label, target=None):
         fitness = -correct_class_prob #manja sansa za tocnu klasu = bolji fitness
     else:
         target_class_prob = outputs[0,target[label]].item()
-        fitness = -target_class_prob
+        fitness = target_class_prob
     
     return fitness
     

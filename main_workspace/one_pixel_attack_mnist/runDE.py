@@ -3,7 +3,7 @@ from torch.utils.data import DataLoader
 from sgd import ImageClassifier, load_model, testloader
 import torch.nn.functional as F
 from torchvision import transforms
-#from display import visualize_adversarial_examples, visiulize_success_rate
+from display import visualize_adversarial_examples
 from differential_evolution import differential_evolution, denorm
 
 
@@ -41,11 +41,14 @@ def runDE(model, test_loader, target=None):
             if (target == None and new_predicted.item() != labels.item()) or (target!=None and new_predicted.item() == target[labels.item()]):
                 #napad je bio uspjesan
                 successes += 1
+                print(f"napad {total} uspjesan")
                 if len(adv_examples) < 3:
                     adv_ex = [adv_images.squeeze().detach().numpy(), new_probs.item()]
                     initial_ex = [images_denorm.squeeze().detach().numpy(), probs.item()]
                     adv_examples.append((adv_ex, initial_ex, new_predicted.item(), labels.item()))
-    
+            if total > 1:
+                return successes, total, adv_examples
+        
     return successes, total, adv_examples
 
 def main():
@@ -62,18 +65,11 @@ def main():
     rate = successes / total
     rates.append(rate)
     print(f"successful_attacks: {successes} / {total}, success_rate: {rate}")
-    #if adv_examples:
-        #visualize_adversarial_examples(adv_examples, save_path="./attack_data/untargeted")
+    if adv_examples:
+        print("visualizing...")
+        visualize_adversarial_examples(adv_examples, save_path="./attack_data/temp")
     
-    #rate
-    rates2 = []
-
-    successes, total, adv_examples = runDE(model, testloader, target = target)
-    rate = successes / total
-    rates2.append(rate)
-    print(f"success rate: {successes}/{total}, {rate:.4f}")
-    #visiulize_success_rate(epsilons2, rates2, save_path="./attack_data/targeted")
-
+    
 
 if __name__ == "__main__":
     main()
