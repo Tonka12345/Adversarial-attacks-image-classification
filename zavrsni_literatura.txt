@@ -1,3 +1,40 @@
+[1] D. E. Rumelhart, G. E. Hinton, i R. J. Williams, “Learning representations by back-propagating errors”, Nature, sv. 323, br. 6088, str. 533–536, 1986.
+
+[2] Y. LeCun, L. Bottou, Y. Bengio, i P. Haffner, “Gradient-based learning applied to document recognition”, Proceedings of the IEEE, sv. 86, br. 11, str. 2278–2324, 1998.
+
+[3] A. Krizhevsky, I. Sutskever, i G. E. Hinton, “Imagenet classification with deep convolutional neural networks”, u Advances in Neural Information Processing Systems
+25: 26th Annual Conference on Neural Information Processing Systems 2012. Pro-
+ceedings of a meeting held December 3-6, 2012, Lake Tahoe, Nevada, United States,2012., str. 1106–1114.
+
+[4] S. Šegvić, “Predavanja iz dubokog učenja”, 2016.
+
+[5] K. He, X. Zhang, S. Ren, i J. Sun, “Deep residual learning for image recognition”, u 2016 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2016, Las Vegas, NV, USA, June 27-30, 2016. IEEE Computer Society, 2016., str. 770–778.
+
+[6] ——, “Identity mappings in deep residual networks”, u Computer Vision - ECCV
+2016 - 14th European Conference, Amsterdam, The Netherlands, October 11-14, 2016, Proceedings, Part IV, ser. Lecture Notes in Computer Science, B. Leibe, J. Matas, N. Sebe, i M. Welling, Ur., sv. 9908. Springer, 2016., str. 630–645.
+
+[7] K.-L. Chung i Y.-L. Chang, “An effective backward filter pruning algorithm using k1,n bipartite graph-based clustering and the decreasing pruning rate approach”,TechRxiv, br. 15642330, 08 2021. https://doi.org/10.36227/techrxiv.1564233048
+
+[8] I. Grubišić, “Interplay of adversarial robustness and generalization in deep convolutional models”, UniZg-FER, teh. izv., 2019.
+
+[9] I. J. Goodfellow, J. Shlens, i C. Szegedy, “Explaining and harnessing adversarial examples”, u 3rd International Conference on Learning Representations, ICLR 2015, San Diego, CA, USA, May 7-9, 2015, Conference Track Proceedings, Y. Bengio i Y. LeCun, Ur., 2015.
+
+[10] A. Madry, A. Makelov, L. Schmidt, D. Tsipras, i A. Vladu, “Towards deep learning models resistant to adversarial attacks”, u 6th International Conference on Learning Representations, ICLR 2018, Vancouver, BC, Canada, April 30 - May 3, 2018, Conference Track Proceedings, 2018.
+
+[11] N. Carlini i D. A. Wagner, “Towards evaluating the robustness of neural networks”, u 2017 IEEE Symposium on Security and Privacy, SP 2017, San Jose, CA, USA, May 22-26, 2017, 2017., str. 39–57.
+
+[12] C. Szegedy, W. Zaremba, I. Sutskever, J. Bruna, D. Erhan, I. J. Goodfellow, i R. Fergus, “Intriguing properties of neural networks”, u 2nd International Conference on Learning Representations, ICLR 2014, Banff, AB, Canada, April 14-16, 2014, Conference Track Proceedings, Y. Bengio i Y. LeCun, Ur., 2014.
+
+[13] J. Su, D. V. Vargas, i K. Sakurai, “One pixel attack for fooling deep neural networks”, CoRR, 2017. [Mrežno]. Adresa: http://arxiv.org/abs/1710.08864
+
+[14] A. Athalye, N. Carlini, i D. A. Wagner, “Obfuscated gradients give a false sense of security: Circumventing defenses to adversarial examples”, u Proceedings of the 35th International Conference on Machine Learning, ICML 2018, Stockholmsmässan, Stockholm, Sweden, July 10-15, 2018, ser. Proceedings of Machine Learning Research, J. G. Dy i A. Krause, Ur., sv. 80. PMLR, 2018., str. 274–283.
+
+[15] H. Salman, S. Jain, E. Wong, i A. Madry, “Certified patch robustness via smoothed vision transformers”, u IEEE/CVF Conference on Computer Vision and Pattern Recognition, CVPR 2022, New Orleans, LA, USA, June 18-24, 2022. IEEE, 2022.,str. 15 116–15 126.49
+
+[16] Wikipedia contributors, “Mnist dataset example”, https://en.wikipedia.org/wiki/File:MNIST_dataset_example.png, accessed: June 1, 2025.
+
+[17] S. Qian, D. Kalimeris, G. Kaplun, i Y. Singer, “Robustness from simple classifiers”,arXiv preprint arXiv:2002.09422, 2020.
+
 https://medium.com/@amdnewaz/in-this-article-well-walk-through-building-a-simple-neural-network-using-pytorch-to-classify-211b33ba5c62
 
 https://neptune.ai/blog/train-pytorch-models-using-genetic-algorithm-with-pygad
